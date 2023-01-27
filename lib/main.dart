@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:tt_clone/constants/gaps.dart';
+import 'package:tt_clone/constants/sizes.dart';
 
 void main() {
   runApp(const MainApp());
@@ -15,7 +17,18 @@ class MainApp extends StatelessWidget {
       theme: ThemeData(
         primaryColor: const Color(0xFFE9435A),
       ),
-      home: Container(),
+      home: Padding(
+        padding: const EdgeInsets.all(Sizes.size14),
+        child: Container(
+          child: Row(
+            children: const [
+              Text("Hello"),
+              Gaps.h20,
+              Text("Testing"),
+            ],
+          ),
+        ),
+      ),
     );
   }
 }
